@@ -1,0 +1,7 @@
+{
+  "name": "wechat-electron",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "<2252442507@qq.com>",
+  "license": "MIT"
+}
