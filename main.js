@@ -1,6 +1,5 @@
 const { app, BrowserWindow, Tray, Menu } = require('electron')
 const path = require('path')
-const neteaseApi = require('./app')
 
 let tray = null
 const icon = path.join(__dirname,'/wechat.exe.ico')
