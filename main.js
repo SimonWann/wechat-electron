@@ -2,8 +2,8 @@ const { app, BrowserWindow, Tray, Menu } = require('electron')
 const path = require('path')
 
 let tray = null
-const icon = path.join(__dirname,'/wechat.exe.ico')
-
+const icon = path.join(__dirname,'/build/icons/256x256.png')
+const preload = path.join(__dirname, 'preload.js')
 
 
 function createWindow () {   
@@ -14,7 +14,8 @@ function createWindow () {
       icon: icon,
       autoHideMenuBar: true,
       webPreferences: {
-        nodeIntegration: true
+        nodeIntegration: true,
+        preload
       },
     })
     win.loadURL("https://wx.qq.com/")

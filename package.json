@@ -1,7 +1,29 @@
 {
   "name": "wechat-electron",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "author": "<2252442507@qq.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build:linux-deb": "electron-builder -l deb",
+    "build:linux-armv7l": "electron-builder -l deb --armv7l",
+    "build:linux-arm64": "electron-builder -l deb --arm64",
+    "build:linux32": "electron-builder -l deb --ia32",
+    "build:linux": "electron-builder -l tar.xz deb AppImage pacman",
+    "build:linux-pacman": "electron-builder -l pacman"
+  },
+  "devDependencies": {
+    "electron": "^11.1.1",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "productName": "wechat-electron",
+    "appId": "com.simon.wechat",
+    "directories": {
+      "output": "build"
+    },
+    "linux": {
+      "icon": "build/icons"
+    }
+  }
 }
